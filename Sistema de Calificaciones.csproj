@@ -184,6 +184,7 @@
     <Content Include="Views\Alumno\MostrarAlumnos.cshtml" />
     <Content Include="Views\Alumno\CreateOrEditAlumnos.cshtml" />
     <Content Include="Views\Materia\MostrarMaterias.cshtml" />
+    <Content Include="Views\Materia\CreateOrEditMaterias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
