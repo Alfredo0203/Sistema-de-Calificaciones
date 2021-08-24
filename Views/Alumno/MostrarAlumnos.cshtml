@@ -1,0 +1,63 @@
+﻿@using Sistema_de_Calificaciones.Models;
+@model List<Alumnos>
+@{
+    ViewBag.Title = "MostrarAlumnos";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <center>
+                <h1>Listado de Alumnos</h1>
+            </center>
+            <br />
+
+            <button class="btn-default"  onclick="window.location.href='/Alumno/CreateOrEditAlumnos'">Agregar alumno</button>
+
+            <table class="table table-hover" >
+                <thead>
+                    <tr>
+                        <th>Id Alumno</th>
+                        <th>Nombre Alumno</th>
+                        <th>Carnet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count() > 0)
+                    {
+
+                        foreach(var alumno in Model)
+                {
+                    <tr>
+                        <td>@alumno.IdAlumno</td>
+                        <td>@alumno.NombreAlumno</td>
+                        <td>@alumno.CodigoAlumno</td>
+                        <td>
+                            <button class="btn btn-success" onclick="window.location.href='/Alumno/CreateOrEditAlumnos?idAlumno=' +@alumno.IdAlumno">Editar</button>
+                            <button class=" btn btn-danger" onclick="window.location.href='/Alumno/EliminarAlumnos?idAlumno=' +@alumno.IdAlumno">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+                   
+                    }
+                    else
+                    {
+                   <tr>
+                       <td colspan="4">
+                           <center>
+                               <label class="text-danger">
+                                   ¡No hay datos para mostrar!
+                               </label>
+                               
+                           </center>
+                       </td>
+                   </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

@@ -16,7 +16,7 @@ namespace Sistema_de_Calificaciones.Models
         public string NombreMateria { get; set; }
 
         [Required(ErrorMessage = "El Código de la materia es requerido")]
-        public string CoMateria { get; set; }
+        public string CodigoMateria { get; set; }
 
         [ForeignKey("IdMateria")]
         public ICollection<Promedios> Promedios { get; set; }

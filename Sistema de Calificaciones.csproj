@@ -127,13 +127,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MateriaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108210543217_Inicial.cs" />
-    <Compile Include="Migrations\202108210543217_Inicial.designer.cs">
-      <DependentUpon>202108210543217_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\202108240336422_Inicial.cs" />
+    <Compile Include="Migrations\202108240336422_Inicial.designer.cs">
+      <DependentUpon>202108240336422_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Alumnos.cs" />
@@ -178,6 +180,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Alumno\Index.cshtml" />
+    <Content Include="Views\Alumno\MostrarAlumnos.cshtml" />
+    <Content Include="Views\Alumno\CreateOrEditAlumnos.cshtml" />
+    <Content Include="Views\Materia\MostrarMaterias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -196,8 +202,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202108210543217_Inicial.resx">
-      <DependentUpon>202108210543217_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108240336422_Inicial.resx">
+      <DependentUpon>202108240336422_Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

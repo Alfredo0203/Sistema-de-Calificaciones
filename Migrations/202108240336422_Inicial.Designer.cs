@@ -13,7 +13,7 @@ namespace Sistema_de_Calificaciones.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202108210543217_Inicial"; }
+            get { return "202108240336422_Inicial"; }
         }
         
         string IMigrationMetadata.Source
