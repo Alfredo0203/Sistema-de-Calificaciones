@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MateriaController.cs" />
+    <Compile Include="Controllers\PromedioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +186,8 @@
     <Content Include="Views\Alumno\CreateOrEditAlumnos.cshtml" />
     <Content Include="Views\Materia\MostrarMaterias.cshtml" />
     <Content Include="Views\Materia\CreateOrEditMaterias.cshtml" />
+    <Content Include="Views\Promedio\AgregarNotas.cshtml" />
+    <Content Include="Views\Promedio\MostrarNotas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

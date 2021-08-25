@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace Sistema_de_Calificaciones.Models
 {
+    
     public class Promedios
     {
+        Contexto contexto = new Contexto();
         [Key]
         public int IdPromedio { get; set; }
         public int IdMateria { get; set; }
@@ -27,6 +30,24 @@ namespace Sistema_de_Calificaciones.Models
 
         public double Promedio { get; set; }
         public string Estado { get; set; }
+
+        [NotMapped]
+        public string NombreAlumno
+        {
+            get 
+            {
+                return contexto.Alumnos.FirstOrDefault(x => x.IdAlumno == IdAlumno).NombreAlumno;
+                    }
+        }
+
+        [NotMapped]
+        public string NombreMateria
+        {
+            get
+            {
+                return contexto.Materias.FirstOrDefault(x => x.IdMateria == IdMateria).NombreMateria;
+            }
+        }
 
     }
 }

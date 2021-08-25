@@ -1,0 +1,57 @@
+﻿@using Sistema_de_Calificaciones.Models;
+@model Promedios
+@{
+    ViewBag.Title = "AgregarNotas";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-md-12">
+            <center>
+                <h2>Ingrese Notas</h2>
+            </center>
+            <br />
+            @using (Html.BeginForm())
+            {
+                @Html.HiddenFor(x => x.IdMateria)
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label">Alumno: </label>
+                @Html.DropDownListFor(x => x.IdAlumno, (IEnumerable<SelectListItem>)ViewBag.Alumno, htmlAttributes: new { @class = "form-control" })
+
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Nota 1</label>
+                @Html.TextBoxFor(x => x.Nota1, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Nota1, null, htmlAttributes: new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Nota 2</label>
+                @Html.TextBoxFor(x => x.Nota2, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Nota2, null, htmlAttributes: new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Nota 3</label>
+                @Html.TextBoxFor(x => x.Nota3, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Nota3, null, htmlAttributes: new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+               <input type="submit" value="Guardar Notas" />
+            </div>
+        </div>
+            }
+        </div>
+    </div>
+</div>
+
+@if(ViewBag.Error !=null && ViewBag.Error== true)
+            {
+                <script>
+                    alert("Ocurrió un error al ingresar notas: El alumno ya tiene notas");
+                </script>
+            }
+
