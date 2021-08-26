@@ -74,5 +74,12 @@ namespace Sistema_de_Calificaciones.Controllers
             return View(model);
         }
 
+        public ActionResult MostrarNotasPorAlumno(int idAlumno= 0)
+        {
+            var modelo = contexto.Promedios.Where(x => x.IdAlumno == idAlumno).ToList();
+
+            return View(modelo);
+        }
+
     }
 }

@@ -188,6 +188,7 @@
     <Content Include="Views\Materia\CreateOrEditMaterias.cshtml" />
     <Content Include="Views\Promedio\AgregarNotas.cshtml" />
     <Content Include="Views\Promedio\MostrarNotas.cshtml" />
+    <Content Include="Views\Promedio\MostrarNotasPorAlumno.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

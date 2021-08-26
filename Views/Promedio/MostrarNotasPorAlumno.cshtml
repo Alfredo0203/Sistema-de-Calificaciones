@@ -1,0 +1,57 @@
+﻿
+@using Sistema_de_Calificaciones.Models;
+@model List<Promedios>
+@{
+    ViewBag.Title = "MostrarNotasPorAlumno";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <h2>Lista de notas por Alumno</h2>
+            </center>
+            <br />  
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Promedio</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @if(Model.Count() > 0)
+                    {
+                        foreach(var x in Model)
+                {
+                    <tr>
+                        <td>@x.NombreMateria</td>
+                        <td>@x.Nota1</td>
+                        <td>@x.Nota2</td>
+                        <td>@x.Nota3</td>
+                        <td>@Math.Round(x.Promedio, 2)</td>
+                        <td @if (x.Promedio >= 6){ <text>class="text-sucess"</text> } else { <text>class="text-danger"</text>} >@x.Estado</td>
+                    </tr>
+                }
+                    } else
+                    {
+                <tr>
+                    <td colspan="6">
+                        <center>
+                           <label class="text-danger">¡No hay datos que mostrar!</label>
+                        </center>
+                    </td>
+                </tr>
+            }
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>
