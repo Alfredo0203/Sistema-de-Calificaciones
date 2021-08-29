@@ -3,6 +3,7 @@
 @model List<Promedios>
 @{
     ViewBag.Title = "MostrarNotasPorAlumno";
+   var idAlumno =  (int)ViewBag.idAlumno;
 }
 
 
@@ -13,6 +14,7 @@
                 <h2>Lista de notas por Alumno</h2>
             </center>
             <br />  
+            <button class="btn btn-default" onclick="window.location.href='/Reportes/ImprimirNotasPorAlumno?idAlumno=' +@idAlumno">Imprimir notas</button>
             <table class="table table-hover">
                 <thead>
                     <tr>
