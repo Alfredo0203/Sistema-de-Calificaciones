@@ -16,6 +16,9 @@
             <br />
             <button class="btn btn-default" onclick="window.location.href='/Promedio/AgregarNotas?IdMateria='+@IdMateria">Agregar Notas</button>
             <br />
+            <br />
+            <button class="btn btn-default" onclick="window.location.href='/Reportes/ImprimirNotasPorMateria?idMateria=' +@IdMateria">Imprimir notas</button>
+            <br />
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -32,14 +35,14 @@
                     {
                         foreach (var notas in Model)
                         {
-                            <tr>
-                                <td>@notas.NombreAlumno</td>
-                                <td>@notas.Nota1</td>
-                                <td>@notas.Nota2</td>
-                                <td>@notas.Nota3</td>
-                                <td>@notas.Promedio</td>
-                                <td>@notas.Estado</td>
-                            </tr>
+                    <tr>
+                        <td>@notas.NombreAlumno</td>
+                        <td>@notas.Nota1</td>
+                        <td>@notas.Nota2</td>
+                        <td>@notas.Nota3</td>
+                        <td>@notas.Promedio</td>
+                        <td @if (notas.Promedio >= 6) { <text> class="text-sucess" </text>  } else { <text> class="text-danger" </text> }>@notas.Estado</td>
+                    </tr>
                         }
                     }
                     else
