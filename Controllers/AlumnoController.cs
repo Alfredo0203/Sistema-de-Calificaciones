@@ -1,4 +1,5 @@
 ﻿using Sistema_de_Calificaciones.Models;
+using Sistema_de_Calificaciones.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Sistema_de_Calificaciones.Controllers
 {
+    [Permisos]
     public class AlumnoController : Controller
     {
 

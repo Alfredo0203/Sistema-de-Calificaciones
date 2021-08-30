@@ -1,4 +1,5 @@
 ﻿using Sistema_de_Calificaciones.Models;
+using Sistema_de_Calificaciones.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Security;
 
 namespace Sistema_de_Calificaciones.Controllers
 {
+ 
     public class HomeController : Controller
     {
 
@@ -47,7 +49,10 @@ namespace Sistema_de_Calificaciones.Controllers
             return RedirectToAction("Login");
 
         }
-
+        public ActionResult Error()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();

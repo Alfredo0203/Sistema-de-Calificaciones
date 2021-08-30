@@ -149,6 +149,7 @@
     <Compile Include="Models\Promedios.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\Permisos.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -202,6 +203,7 @@
     <Content Include="Views\Reportes\NotasPorAlumno.cshtml" />
     <Content Include="Views\Reportes\NotasPorMateria.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
