@@ -138,15 +138,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108240336422_Inicial.cs" />
-    <Compile Include="Migrations\202108240336422_Inicial.designer.cs">
-      <DependentUpon>202108240336422_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\202108300428325_Inicial.cs" />
+    <Compile Include="Migrations\202108300428325_Inicial.designer.cs">
+      <DependentUpon>202108300428325_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Alumnos.cs" />
     <Compile Include="Models\Contexto.cs" />
     <Compile Include="Models\Materias.cs" />
     <Compile Include="Models\Promedios.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +201,7 @@
     <Content Include="Views\Promedio\MostrarNotasPorAlumno.cshtml" />
     <Content Include="Views\Reportes\NotasPorAlumno.cshtml" />
     <Content Include="Views\Reportes\NotasPorMateria.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -218,8 +220,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202108240336422_Inicial.resx">
-      <DependentUpon>202108240336422_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108300428325_Inicial.resx">
+      <DependentUpon>202108300428325_Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

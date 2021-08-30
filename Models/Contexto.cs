@@ -13,5 +13,6 @@ namespace Sistema_de_Calificaciones.Models
         public DbSet<Alumnos> Alumnos { get; set; }
         public DbSet<Materias> Materias { get; set; }
         public DbSet<Promedios> Promedios { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }

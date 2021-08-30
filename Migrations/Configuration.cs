@@ -1,5 +1,6 @@
 ﻿namespace Sistema_de_Calificaciones.Migrations
 {
+    using Sistema_de_Calificaciones.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -18,6 +19,16 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+
+            var usuario = new Users()
+            {
+                nombreUsuario = "Administrador",
+                Password = "root",
+                isActivo = true,
+                roles = Roles.Administrador
+            };
+            context.Users.AddOrUpdate(usuario);
+            context.SaveChanges();
         }
     }
 }

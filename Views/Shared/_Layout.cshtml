@@ -17,13 +17,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Sistema de Calificaciones", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sistema de Calificaciones", "Login", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Mostrar Alumnos", "MostrarAlumnos", "Alumno")</li>
-                    <li>@Html.ActionLink("Mostrar Materias", "MostrarMaterias", "Materia")</li>
-                    
+
+
+                    @if (Session["IdUsuario"] != null)
+                    {
+                        <li>@Html.ActionLink("Mostrar Alumnos", "MostrarAlumnos", "Alumno")</li>
+                        <li>@Html.ActionLink("Mostrar Materias", "MostrarMaterias", "Materia")</li>
+                        <li>@Html.ActionLink("Cerrar Sesión", "Salir", "Home")</li>
+                    }
                 </ul>
             </div>
         </div>
