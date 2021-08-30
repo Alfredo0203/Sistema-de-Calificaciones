@@ -1,4 +1,5 @@
-﻿using Sistema_de_Calificaciones.Models;
+﻿using Sistema_de_Calificaciones.Helper;
+using Sistema_de_Calificaciones.Models;
 using Sistema_de_Calificaciones.Seguridad;
 using System;
 using System.Collections.Generic;
@@ -25,10 +26,12 @@ namespace Sistema_de_Calificaciones.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                var pass = GeneralHelper.EncriptarPassword(model.Password);
                 var usuario = contexto.Users.FirstOrDefault(x => x.nombreUsuario.Equals(model.nombreUsuario) &&
-                x.Password.Equals(model.Password));
+                x.Password.Equals(pass));
                 if(usuario != null)
-                {
+                {-------------++
                     Session["IdUsuario"] = usuario.idUsuario.ToString();
                    return RedirectToAction("MostrarAlumnos", "Alumno");
                 }

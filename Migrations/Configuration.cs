@@ -1,5 +1,6 @@
 ﻿namespace Sistema_de_Calificaciones.Migrations
 {
+    using Sistema_de_Calificaciones.Helper;
     using Sistema_de_Calificaciones.Models;
     using System;
     using System.Data.Entity;
@@ -23,7 +24,7 @@
             var usuario = new Users()
             {
                 nombreUsuario = "Administrador",
-                Password = "root",
+                Password = GeneralHelper.EncriptarPassword("root"),
                 isActivo = true,
                 roles = Roles.Administrador
             };
