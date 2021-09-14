@@ -31,7 +31,7 @@ namespace Sistema_de_Calificaciones.Controllers
                 var usuario = contexto.Users.FirstOrDefault(x => x.nombreUsuario.Equals(model.nombreUsuario) &&
                 x.Password.Equals(pass));
                 if(usuario != null)
-                {-------------++
+                {
                     Session["IdUsuario"] = usuario.idUsuario.ToString();
                    return RedirectToAction("MostrarAlumnos", "Alumno");
                 }

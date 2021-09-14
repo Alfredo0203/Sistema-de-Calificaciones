@@ -20,5 +20,6 @@ namespace Sistema_de_Calificaciones.Models
 
         [ForeignKey("IdMateria")]
         public ICollection<Promedios> Promedios { get; set; }
+
     }
 }

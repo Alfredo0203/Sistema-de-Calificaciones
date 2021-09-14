@@ -10,6 +10,7 @@ namespace Sistema_de_Calificaciones.Seguridad
 {
     public class Permisos : ActionFilterAttribute
     {
+       
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);

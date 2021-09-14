@@ -23,7 +23,7 @@ namespace Sistema_de_Calificaciones.Helper
 
                 }
                 return sb.ToString();
-            }
+            } 
         }
 
     }
